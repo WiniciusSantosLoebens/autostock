@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 function Contact() {
 
@@ -28,7 +29,7 @@ function Contact() {
 
       if (resposta.ok) {
 
-        alert("Mensagem enviada com sucesso!");
+        toast.success("Mensagem enviada com sucesso!");
 
         setNome("");
         setEmail("");
@@ -36,14 +37,14 @@ function Contact() {
 
       } else {
 
-        alert("Erro ao enviar mensagem.");
+        toast.error("Erro ao enviar mensagem.");
 
       }
 
     } catch (error) {
 
       console.error(error);
-      alert("Erro de conexão.");
+      toast.error("Erro de conexão.");
 
     }
   }
@@ -89,6 +90,8 @@ function Contact() {
         </button>
 
       </form>
+
+      <ToastContainer />
 
     </section>
   );
