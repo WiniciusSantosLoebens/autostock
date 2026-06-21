@@ -11,9 +11,9 @@ function Header() {
         <a href="#contato">Contato</a>
       </nav>
 
-      <button className="btn-header">
-        Entrar
-      </button>
+      <a href="#contato" className="btn-header">
+        Solicitar Demonstração
+      </a>
 
     </header>
   );

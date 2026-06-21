@@ -9,14 +9,14 @@ function Features() {
         <div className="card">
           <h3>Controle de Estoque</h3>
           <p>
-            Cadastre e acompanhe peças de motor e suspensão.
+            Acompanhe peças de motor e suspensão.
           </p>
         </div>
 
         <div className="card">
           <h3>Entrada e Saída</h3>
           <p>
-            Controle movimentações de forma simples.
+            Controle movimentações e preços acessíveis.
           </p>
         </div>
 

@@ -193,6 +193,35 @@ section {
   line-height: 1.6;
 }
 
+.preco {
+  display: block;
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1677ff;
+}
+
+.compatibilidade {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.btn-detalhes {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #1677ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-detalhes:hover {
+  transform: translateY(-2px);
+}
+
 
 .contact {
   text-align: center;
@@ -352,17 +381,17 @@ section {
 }
 
 .btn-header {
-  border: none;
+  background: #1677ff;
+  color: rgb(255, 255, 255) !important;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-  background: #0077ff;
-
-  color: white;
-
-  padding: 10px 20px;
-
-  border-radius: 8px;
-
-  cursor: pointer;
+.btn-header:hover {
+  transform: translateY(-2px);
 }
 
 .card img {
@@ -389,4 +418,15 @@ section {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.btn-assinar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #1677ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
 }

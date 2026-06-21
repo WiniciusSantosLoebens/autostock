@@ -6,14 +6,46 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [mensagem, setMensagem] = useState("");
 
-  function enviar(e) {
+  async function enviar(e) {
     e.preventDefault();
 
-    alert("Mensagem enviada!");
+    try {
 
-    setNome("");
-    setEmail("");
-    setMensagem("");
+      const resposta = await fetch(
+        "/.netlify/functions/sendEmail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            nome,
+            email,
+            mensagem,
+          }),
+        }
+      );
+
+      if (resposta.ok) {
+
+        alert("Mensagem enviada com sucesso!");
+
+        setNome("");
+        setEmail("");
+        setMensagem("");
+
+      } else {
+
+        alert("Erro ao enviar mensagem.");
+
+      }
+
+    } catch (error) {
+
+      console.error(error);
+      alert("Erro de conexão.");
+
+    }
   }
 
   return (
@@ -34,6 +66,7 @@ function Contact() {
           placeholder="Seu nome"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
+          required
         />
 
         <input
@@ -41,17 +74,19 @@ function Contact() {
           placeholder="Seu melhor email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
 
         <textarea
           placeholder="Digite sua mensagem"
           value={mensagem}
           onChange={(e) => setMensagem(e.target.value)}
+          required
         />
 
-       <button type="submit">
-        Solicitar Contato
-     </button>
+        <button type="submit">
+          Solicitar Contato
+        </button>
 
       </form>
 

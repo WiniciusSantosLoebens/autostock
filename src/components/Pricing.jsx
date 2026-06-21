@@ -13,7 +13,9 @@ function Pricing() {
           <p>Até 500 peças</p>
           <p>Relatórios básicos</p>
 
-          <button>Assinar</button>
+          <a href="#contato" className="btn-assinar">
+            Assinar
+          </a>
         </div>
 
         <div className="card destaque">
@@ -24,7 +26,9 @@ function Pricing() {
           <p>Relatórios avançados</p>
           <p>Dashboard completo</p>
 
-          <button>Assinar</button>
+          <a href="#contato" className="btn-assinar">
+            Assinar
+          </a>
         </div>
 
         <div className="card">
@@ -34,7 +38,9 @@ function Pricing() {
           <p>Produtos ilimitados</p>
           <p>Suporte prioritário</p>
 
-          <button>Assinar</button>
+          <a href="#contato" className="btn-assinar">
+            Assinar
+          </a>
         </div>
 
       </div>
