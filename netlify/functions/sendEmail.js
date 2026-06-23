@@ -15,7 +15,7 @@ exports.handler = async (event) => {
 
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USERS,
             subject: `Novo contato AutoStock - ${nome}`,
             text:`
             Nome: ${nome}
